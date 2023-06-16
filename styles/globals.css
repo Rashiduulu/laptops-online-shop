@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-body text-[#232428];
+    }
+}
+
+@layer components {
+    .nav {
+        @apply cursor-pointer opacity-75 transition hover:opacity-100;
+    }
+
+    .header-icon {
+        @apply cursor-pointer text-[24px];
+    }
+
+    .learn-more-link {
+        @apply relative cursor-pointer font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-cyan-600 before:transition-all before:duration-200 hover:before:scale-x-100;
+    }
+
+    .nav-item {
+        @apply relative text-[17px] cursor-pointer font-medium opacity-90 before:absolute before:inset-x-0 before:-bottom-[2px] before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-cyan-600 before:transition-all before:duration-200 hover:before:scale-x-100;
+    }
+
+    .nav-item-active {
+        @apply relative cursor-pointer font-medium before:absolute before:inset-x-0 before:-bottom-[2px] before:h-0.5 before:origin-left before:scale-x-0 before:scale-x-100 before:transform before:rounded-bl before:bg-cyan-600 before:transition-all before:duration-200;
+    }
+
+    .shopping-cart-btn {
+        @apply hover:scale-90 transition hover:opacity-100
+    }
+
+    .empty-cart-img {
+        @apply -z-10
+    }
+
+    .product-slug-img {
+        @apply w-full object-contain h-[200px] sm:h-[300px] lg:h-[500px]
+    }
+
+
+}
+
+.dropdown-contact-number {
+    visibility: hidden;
+    opacity: .5;
+    transition: all .1s ease-out;
+}
+
+.contact-number:hover + .dropdown-contact-number, .dropdown-contact-number:focus-within, .dropdown-contact-number:hover {
+    visibility: visible;
+    opacity: 1;
+    transition: all .3s ease-out;
+}
+
+.banner-img {
+    animation: bounce 4s ease-in-out infinite;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-20%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+/*.footer-bg {*/
+/*    background: url("http://sou.edu.kg/wp-content/uploads/2023/03/IMG_0813.jpeg") no-repeat center/cover;*/
+/*}*/
+
+
+
+  
